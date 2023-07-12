@@ -28,7 +28,7 @@
                         {% csrf_token %}
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Username" name="username" >
-                            <input type="password" class="form-control" placeholder="Username" name="psw" >
+                            <input type="password" class="form-control" placeholder="Password" name="psw" >
                             <button class="btn btn-primary" type="submit">Login</button>
                             <a class="btn btn-link" href="{% url 'onlinecourse:registration' %}">Sign Up</a>
                         </div>
@@ -50,7 +50,6 @@
                 </div>
             {% endfor %}
         </div>
-        <!-- Each course has only one course (instead of lesson) exam, so no for loop here -->
         {% if user.is_authenticated and course.question_set.count > 0 %}
             <div class="w-100">
                 <hr>
