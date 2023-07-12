@@ -4,7 +4,7 @@ from .models import Question, Choice, Submission, Enrollment
 
 class ChoiceInline(admin.StackedInline):
     model = Choice
-    extra = 2
+    extra = 4
 
 
 class LessonInline(admin.StackedInline):
